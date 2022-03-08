@@ -65,7 +65,7 @@ class SamplePaginatorDataLoader implements DataLoaderInterface
 
 2. Replace default data loader (doctrine QueryBuilder) with your new data loader.
 ```yaml
-
+# config/services.yaml
 services:
   
   ...

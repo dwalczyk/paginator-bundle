@@ -1,0 +1,21 @@
+{
+  "name": "dwalczyk/paginator-bundle",
+  "description": "Symfony bundle for paginate",
+  "type": "symfony-bundle",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.0",
+    "symfony/framework-bundle": "^6.0",
+    "doctrine/orm": "^2.11"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "secure-http": false
+  },
+  "autoload": {
+    "psr-4": {
+      "DWalczyk\\Paginator\\": "src/"
+    }
+  }
+}

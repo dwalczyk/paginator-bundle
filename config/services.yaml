@@ -1,0 +1,9 @@
+services:
+
+  _defaults:
+    autowire: true # Automatically injects dependencies in your services.
+
+  DWalczyk\Paginator\Paginator: ~
+  DWalczyk\Paginator\DataLoader\DoctrineOrmDataLoader: ~
+
+  DWalczyk\Paginator\DataLoaderInterface: '@DWalczyk\Paginator\DataLoader\DoctrineOrmDataLoader'

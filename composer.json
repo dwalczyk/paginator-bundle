@@ -2,7 +2,15 @@
   "name": "dwalczyk/paginator-bundle",
   "description": "Symfony bundle for paginate",
   "type": "symfony-bundle",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "homepage": "https://dawidwalczyk.pl",
+  "authors": [
+    {
+      "name": "Dawid Walczyk",
+      "email": "kontakt@dawidwalczyk.pl"
+    }
+  ],
   "version": "0.1.1",
   "prefer-stable": true,
   "require": {

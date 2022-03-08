@@ -2,7 +2,7 @@
   "name": "dwalczyk/paginator-bundle",
   "description": "Symfony bundle for paginate",
   "type": "symfony-bundle",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": true,
   "require": {
     "php": "^8.0",

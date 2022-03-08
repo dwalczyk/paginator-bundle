@@ -9,8 +9,8 @@ class Paginator implements PaginatorInterface
 
     public function paginate(mixed $target, int $page = 1, int $itemsPerPage = 30): PaginatorResultInterface
     {
-        $items = $this->dataLoader->loadItems($target, $this->calculateOffset($page, $itemsPerPage), $itemsPerPage);
-        $totalItemsCount = $this->dataLoader->loadTotalCount($target);
+        $items = $this->dataLoader->loadItems(clone $target, $this->calculateOffset($page, $itemsPerPage), $itemsPerPage);
+        $totalItemsCount = $this->dataLoader->loadTotalCount(clone $target);
 
         $totalPagesCount = $this->calculatePagesCount($totalItemsCount, $itemsPerPage);
 

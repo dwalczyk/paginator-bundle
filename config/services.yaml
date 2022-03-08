@@ -7,3 +7,4 @@ services:
   DWalczyk\Paginator\DataLoader\DoctrineOrmDataLoader: ~
 
   DWalczyk\Paginator\DataLoaderInterface: '@DWalczyk\Paginator\DataLoader\DoctrineOrmDataLoader'
+  DWalczyk\Paginator\PaginatorInterface: '@DWalczyk\Paginator\Paginator'

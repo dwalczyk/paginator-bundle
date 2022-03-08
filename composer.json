@@ -11,7 +11,7 @@
       "email": "kontakt@dawidwalczyk.pl"
     }
   ],
-  "version": "0.1.3",
+  "version": "1.0.0",
   "prefer-stable": true,
   "require": {
     "php": "^8.0",

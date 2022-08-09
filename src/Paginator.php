@@ -26,7 +26,7 @@ class Paginator implements PaginatorInterface
 
     private function calculateOffset(int $page, int $itemsPerPage): int
     {
-        if ($page < 0) $page = 0;
+        if ($page < 1) $page = 1;
 
         return ($page - 1) * $itemsPerPage;
     }

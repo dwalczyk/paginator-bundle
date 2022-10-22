@@ -19,6 +19,7 @@ class Paginator implements PaginatorInterface
             count($items),
             $totalItemsCount,
             $totalPagesCount,
+            $page,
             $page != 1,
             $totalPagesCount > $page
         );

@@ -12,9 +12,9 @@ interface PaginatorResultInterface
 
     public function getPagesCount(): int;
 
+    public function getCurrentPage(): int;
+
     public function isPreviousPageExist(): bool;
 
     public function isNextPageExist(): bool;
-
-
 }

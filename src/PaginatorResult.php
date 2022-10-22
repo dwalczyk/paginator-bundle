@@ -9,6 +9,7 @@ class PaginatorResult implements PaginatorResultInterface
         private int $itemsCount,
         private int $totalItemsCount,
         private int $pagesCount,
+        private int $currentPage,
         private bool $previousPageExist,
         private bool $nextPageExist,
     )
@@ -32,6 +33,11 @@ class PaginatorResult implements PaginatorResultInterface
     public function getPagesCount(): int
     {
         return $this->pagesCount;
+    }
+
+    public function getCurrentPage(): int
+    {
+        return $this->currentPage;
     }
 
     public function isPreviousPageExist(): bool

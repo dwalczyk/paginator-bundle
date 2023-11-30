@@ -1,0 +1,48 @@
+includes:
+    - vendor/spaze/phpstan-disallowed-calls/extension.neon
+parameters:
+    level: 8
+    paths:
+        - src
+    reportUnmatchedIgnoredErrors: false
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+
+    ignoreErrors:
+        -
+            messages:
+                - '#should return [a-zA-Z0-9\\_]+ but returns object.#'
+                - '#should return [a-zA-Z0-9\\_]+\|null but returns object\|null.#'
+                - '#should return array<[a-zA-Z0-9\\_]+> but returns array<int, object>.#'
+            path: src/*/Repository/*
+
+    disallowedFunctionCalls:
+        - function: 'var_dump()'
+        - function: 'print_r()'
+        - function: 'dump()'
+        - function: 'echo()'
+        - function: 'die()'
+        - function: 'exit()'
+        - function: 'header()'
+
+    disallowedNamespaces:
+        -
+            class: '\DateTime'
+            message: 'use \DateTimeImmutable instead'
+
+    disallowedSuperglobals:
+        -
+            superglobal: '$_GET'
+            message: 'use the Request methods instead'
+        -
+            superglobal: '$_POST'
+            message: 'use the Request methods instead'
+        -
+            superglobal: '$_COOKIE'
+            message: 'use the Request methods instead'
+        -
+            superglobal: '$_FILES'
+            message: 'use the Request methods instead'
+        -
+            superglobal: '$_SESSION'
+            message: 'use the Request methods instead'

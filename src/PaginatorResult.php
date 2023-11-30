@@ -1,19 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DWalczyk\Paginator;
 
-class PaginatorResult implements PaginatorResultInterface
+final readonly class PaginatorResult implements PaginatorResultInterface
 {
     public function __construct(
-        private array $items,
-        private int $itemsCount,
-        private int $totalItemsCount,
-        private int $pagesCount,
-        private int $currentPage,
-        private bool $previousPageExist,
-        private bool $nextPageExist,
-    )
-    {}
+        public array $items,
+        public int $itemsCount,
+        public int $totalItemsCount,
+        public int $pagesCount,
+        public int $currentPage,
+        public bool $previousPageExist,
+        public bool $nextPageExist,
+    ) {}
 
     public function getItems(): array
     {

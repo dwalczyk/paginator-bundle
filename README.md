@@ -23,9 +23,7 @@ Doctrine QueryBuilder is supported by default.
 ```php
 use DWalczyk\Paginator\PaginatorInterface;
 
-/**
- * @Route(methods={"GET"}, name="")
- */
+#[Route('/users')]
 public function __invoke(PaginatorInterface $paginator)
 {
     $res = $paginator->paginate(

@@ -1,18 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DWalczyk\Paginator\DataLoader;
 
 use Doctrine\ORM\QueryBuilder;
-use DWalczyk\Paginator\DataLoaderInterface;
 use Doctrine\ORM\Tools\Pagination\Paginator;
+use DWalczyk\Paginator\DataLoaderInterface;
 
-class DoctrineOrmDataLoader implements DataLoaderInterface
+final class DoctrineOrmDataLoader implements DataLoaderInterface
 {
     /**
      * @param QueryBuilder $target
-     * @param int $offset
-     * @param int $limit
-     * @return array
+     *
      * @throws \Exception
      */
     public function loadItems(mixed $target, int $offset, int $limit): array
@@ -37,7 +37,7 @@ class DoctrineOrmDataLoader implements DataLoaderInterface
 
     /**
      * @param QueryBuilder $target
-     * @return int
+     *
      * @throws \Exception
      */
     public function loadTotalCount(mixed $target): int
@@ -45,12 +45,11 @@ class DoctrineOrmDataLoader implements DataLoaderInterface
         $this->validateTarget($target);
 
         $result = $target->getQuery()->getResult();
-        return count($result);
+
+        return \count($result);
     }
 
     /**
-     * @param mixed $target
-     * @return void
      * @throws \Exception
      */
     private function validateTarget(mixed $target): void

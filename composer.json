@@ -11,11 +11,11 @@
       "email": "kontakt@dawidwalczyk.pl"
     }
   ],
-  "version": "1.1.0",
+  "version": "1.1.1",
   "prefer-stable": true,
   "require": {
     "php": "^8.2",
-    "symfony/framework-bundle": "^6.0",
+    "symfony/framework-bundle": "^6.0|^7.0",
     "doctrine/orm": "^2.11"
   },
   "config": {
